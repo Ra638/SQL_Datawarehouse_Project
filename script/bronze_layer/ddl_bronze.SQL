@@ -174,10 +174,10 @@ SET @end_time = GETDATE();
 	PRINT '>>LOAD DUARTION :' +cast( DATEDIFF(second , @start_time ,@end_time) as nvarchar) +'Seconds';
 	PRINT'----------------------'
 SET @batch_end_time = GETDATE();
-    PRINT'=================================================================';
+        PRINT'=================================================================';
 	PRINT' LOADING OF BRONZE LAYER COMPLETED :)';
 	PRINT'=================================================================';
-    PRINT '>> BATCH LOAD DUARATION :'+ CAST(DATEDIFF(second , @batch_start_time ,@batch_end_time) as nvarchar) + ' Seconds';
+        PRINT '>> BATCH LOAD DUARATION :'+ CAST(DATEDIFF(second , @batch_start_time ,@batch_end_time) as nvarchar) + ' Seconds';
 	PRINT 'DONE AND DUSTED';
 END TRY 
 BEGIN CATCH 
