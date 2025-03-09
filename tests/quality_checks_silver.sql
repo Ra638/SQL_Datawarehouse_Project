@@ -86,7 +86,7 @@ WHERE prd_end_dt < prd_start_dt;
 -- Expectation: No Invalid Dates
 SELECT 
     NULLIF(sls_due_dt, 0) AS sls_due_dt 
-FROM bronze.crm_sales_details
+FROM silver.crm_sales_details
 WHERE sls_due_dt <= 0 
     OR LEN(sls_due_dt) != 8 
     OR sls_due_dt > 20500101 
